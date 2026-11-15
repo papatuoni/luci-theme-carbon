@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--
+	Static, script-free preview for the console-look skin.
+	All strings are neutral placeholders; no product wording, no behaviour.
+-->
+<html lang="zh-Hans" data-page="demo-console-look">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<title>控制台外观 · 静态预览</title>
+	<link rel="stylesheet" href="../htdocs/luci-static/carbon/carbon.css">
+</head>
+<body>
+<div class="cb-app">
+	<aside class="cb-sidebar">
+		<a class="cb-brand" href="#">
+			<img class="cb-brand-logo" src="../htdocs/luci-static/carbon/logo.svg" alt="">
+			<span class="cb-brand-text"><strong>DEMO</strong><small>console skin preview</small></span>
+		</a>
+		<nav class="cb-nav">
+			<div class="cb-nav-sect">总览</div>
+			<a class="cb-nav-link" href="#"><span class="cb-nav-ico">◈</span><span class="cb-nav-label">状态</span></a>
+			<a class="cb-nav-link" href="#"><span class="cb-nav-ico">▤</span><span class="cb-nav-label">系统</span></a>
+			<div class="cb-nav-sect">配置</div>
+			<a class="cb-nav-link" href="#"><span class="cb-nav-ico">◎</span><span class="cb-nav-label">接口</span></a>
+			<a class="cb-nav-link" href="#"><span class="cb-nav-ico">⌘</span><span class="cb-nav-label">无线</span></a>
+			<a class="cb-nav-link" href="#"><span class="cb-nav-ico">⎈</span><span class="cb-nav-label">路由</span></a>
+			<a class="cb-nav-link" href="#"><span class="cb-nav-ico">⌁</span><span class="cb-nav-label">地址分配</span></a>
+			<a class="cb-nav-link" href="#"><span class="cb-nav-ico">▣</span><span class="cb-nav-label">诊断</span></a>
+			<a class="cb-nav-link active" href="#"><span class="cb-nav-ico">⚙</span><span class="cb-nav-label">设备面板</span></a>
+		</nav>
+	</aside>
+	<div class="cb-scrim"></div>
+
+	<main class="cb-main">
+		<header class="cb-toolbar">
+			<div class="cb-title">设备面板</div>
+			<div class="cl-search">搜索条目<kbd>Ctrl K</kbd></div>
+			<div id="indicators" class="cb-indicators"><span data-indicator>只读预览</span></div>
+		</header>
+
+		<div id="maincontent" class="cb-content">
+			<h2>控制台概览</h2>
+
+			<ul class="tabs">
+				<li class="active"><a href="#">视图</a></li>
+				<li><a href="#">结构</a></li>
+				<li><a href="#">参数</a></li>
+				<li><a href="#">同步</a></li>
+				<li><a href="#">硬件</a></li>
+				<li><a href="#">校准</a></li>
+				<li><a href="#">说明</a></li>
+			</ul>
+
+			<div class="cl-grid">
+				<div class="cl-tile">
+					<div class="cl-tile__head">
+						<span class="cl-tile__title">模块 A</span>
+						<label class="cl-switch"><input type="checkbox" checked><span class="cl-switch__track"></span></label>
+					</div>
+					<div class="cl-tile__desc">示意说明文字，用于展示标题、正文与元信息之间的层级关系，可替换为任意内容。</div>
+					<div class="cl-tile__meta">状态 · 已保存 · 版本 1</div>
+				</div>
+				<div class="cl-tile">
+					<div class="cl-tile__head">
+						<span class="cl-tile__title">模块 B</span>
+						<label class="cl-switch"><input type="checkbox" checked><span class="cl-switch__track"></span></label>
+					</div>
+					<div class="cl-tile__desc">另一段占位描述，仅用于观察开关与文本在紧凑卡片中的对齐效果。</div>
+					<div class="cl-tile__meta">状态 · 已保存 · 版本 1</div>
+				</div>
+				<div class="cl-tile">
+					<div class="cl-tile__head">
+						<span class="cl-tile__title">模块 C</span>
+						<label class="cl-switch"><input type="checkbox"><span class="cl-switch__track"></span></label>
+					</div>
+					<div class="cl-tile__desc">第三张卡片保留关闭态开关，用来对比两种轨道颜色与圆点位置。</div>
+					<div class="cl-tile__meta">状态 · 已保存 · 版本 1</div>
+				</div>
+			</div>
+
+			<div class="cl-actions">
+				<button class="cl-btn cl-btn--muted" disabled>提交设置</button>
+			</div>
+
+			<div class="cl-meta">
+				<span>下发状态</span><span class="cl-badge cl-badge--ok">已启用</span>
+				<span>模式</span><span class="cl-tag">auto</span>
+				<span>修订</span><code>rev.2026-11</code>
+			</div>
+
+			<div class="cl-section"><h3 class="cl-section__title">控制节点</h3></div>
+			<div class="cl-kv">
+				<div>运行状态</div><div><span class="cl-badge cl-badge--ok">就绪</span></div>
+				<div>时钟状态</div><div><span class="cl-badge cl-badge--idle">未知</span></div>
+				<div>模块类型</div><div>UX-3300</div>
+				<div>固件版本</div><div>V2.4.1</div>
+			</div>
+
+			<div class="cl-section"><h3 class="cl-section__title">节点列表</h3></div>
+			<table class="cl-table">
+				<thead><tr>
+					<th>编号</th><th>来源</th><th>型号</th><th>序列号</th><th>注册</th><th>业务</th>
+					<th>版本</th><th>通道</th><th>连接</th><th>配置</th><th>同步</th><th>操作</th>
+				</tr></thead>
+				<tbody>
+					<tr>
+						<td class="cl-cell-key">06</td><td>SC-01</td><td>M-200</td><td>SC-01-A19</td>
+						<td><span class="cl-badge cl-badge--ok">运行中</span></td>
+						<td><span class="cl-badge cl-badge--ok">复核 2</span></td>
+						<td>2.4.1</td><td>ch-07</td>
+						<td><span class="cl-badge cl-badge--warn">排队中</span></td>
+						<td><span class="cl-badge cl-badge--idle">未启动</span></td>
+						<td><span class="cl-badge cl-badge--warn">待分配</span></td>
+						<td class="cl-table__actions"><button class="cl-btn">查看</button></td>
+					</tr>
+					<tr>
+						<td class="cl-cell-key">00</td><td>HC-3T</td><td>DU-C</td><td>HC-3T-2049</td>
+						<td><span class="cl-badge cl-badge--ok">运行中</span></td>
+						<td><span class="cl-badge cl-badge--ok">复核 2</span></td>
+						<td>1.0.2</td><td>ch-01</td>
+						<td><span class="cl-badge cl-badge--ok">在线</span></td>
+						<td><span class="cl-badge cl-badge--ok">已完成</span></td>
+						<td><span class="cl-badge cl-badge--ok">已校验</span></td>
+						<td class="cl-table__actions"><button class="cl-btn">查看</button></td>
+					</tr>
+					<tr>
+						<td class="cl-cell-key">02</td><td>HW-TC</td><td>V-152</td><td>HW-TC-8812</td>
+						<td><span class="cl-badge cl-badge--ok">运行中</span></td>
+						<td><span class="cl-badge cl-badge--ok">复核 2</span></td>
+						<td>5.0.3</td><td>ch-03</td>
+						<td><span class="cl-badge cl-badge--ok">在线 · 1 秒前</span></td>
+						<td><span class="cl-badge cl-badge--busy">处理中</span></td>
+						<td><span class="cl-badge cl-badge--warn">等待中</span></td>
+						<td class="cl-table__actions"><button class="cl-btn">查看</button></td>
+					</tr>
+					<tr>
+						<td class="cl-cell-key">03</td><td>HW-TC</td><td>K-155</td><td>HW-TC-4417</td>
+						<td><span class="cl-badge cl-badge--ok">运行中</span></td>
+						<td><span class="cl-badge cl-badge--ok">复核 2</span></td>
+						<td>5.0.3</td><td>ch-04</td>
+						<td><span class="cl-badge cl-badge--ok">在线 · 3 秒前</span></td>
+						<td><span class="cl-badge cl-badge--ok">已完成</span></td>
+						<td><span class="cl-badge cl-badge--warn">等待中</span></td>
+						<td class="cl-table__actions"><button class="cl-btn">查看</button></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="cl-section"><h3 class="cl-section__title">端口阵列</h3></div>
+			<div class="cl-ports">
+				<div class="cl-port cl-port--up"><div class="cl-port__name">ch-01</div><div class="cl-port__card"><span class="cl-port__glyph"></span><div class="cl-port__state">在线</div><div class="cl-port__bar"></div><div class="cl-port__flow">▲ 9.6 MiB<br>▼ 8.0 MiB</div></div></div>
+				<div class="cl-port cl-port--up"><div class="cl-port__name">ch-02</div><div class="cl-port__card"><span class="cl-port__glyph"></span><div class="cl-port__state">在线</div><div class="cl-port__bar"></div><div class="cl-port__flow">▲ 10.0 MiB<br>▼ 7.6 MiB</div></div></div>
+				<div class="cl-port cl-port--up"><div class="cl-port__name">ch-03</div><div class="cl-port__card"><span class="cl-port__glyph"></span><div class="cl-port__state">在线</div><div class="cl-port__bar"></div><div class="cl-port__flow">▲ 17.7 MiB<br>▼ 15.2 MiB</div></div></div>
+				<div class="cl-port cl-port--up"><div class="cl-port__name">ch-04</div><div class="cl-port__card"><span class="cl-port__glyph"></span><div class="cl-port__state">在线</div><div class="cl-port__bar"></div><div class="cl-port__flow">▲ 262.0 KiB<br>▼ 509.9 KiB</div></div></div>
+				<div class="cl-port"><div class="cl-port__name">ch-05</div><div class="cl-port__card"><span class="cl-port__glyph"></span><div class="cl-port__state">离线</div><div class="cl-port__bar"></div><div class="cl-port__flow">▲ —<br>▼ —</div></div></div>
+				<div class="cl-port"><div class="cl-port__name">ch-06</div><div class="cl-port__card"><span class="cl-port__glyph"></span><div class="cl-port__state">离线</div><div class="cl-port__bar"></div><div class="cl-port__flow">▲ —<br>▼ —</div></div></div>
+				<div class="cl-port cl-port--up"><div class="cl-port__name">ch-07</div><div class="cl-port__card"><span class="cl-port__glyph"></span><div class="cl-port__state">在线</div><div class="cl-port__bar"></div><div class="cl-port__flow">▲ 6.7 MiB<br>▼ 4.8 MiB</div></div></div>
+				<div class="cl-port"><div class="cl-port__name">ch-08</div><div class="cl-port__card"><span class="cl-port__glyph"></span><div class="cl-port__state">离线</div><div class="cl-port__bar"></div><div class="cl-port__flow">▲ —<br>▼ —</div></div></div>
+				<div class="cl-port"><div class="cl-port__name">ch-09</div><div class="cl-port__card"><span class="cl-port__glyph"></span><div class="cl-port__state">离线</div><div class="cl-port__bar"></div><div class="cl-port__flow">▲ —<br>▼ —</div></div></div>
+				<div class="cl-port"><div class="cl-port__name">ch-10</div><div class="cl-port__card"><span class="cl-port__glyph"></span><div class="cl-port__state">离线</div><div class="cl-port__bar"></div><div class="cl-port__flow">▲ —<br>▼ —</div></div></div>
+				<div class="cl-port"><div class="cl-port__name">ch-11</div><div class="cl-port__card"><span class="cl-port__glyph"></span><div class="cl-port__state">离线</div><div class="cl-port__bar"></div><div class="cl-port__flow">▲ —<br>▼ —</div></div></div>
+				<div class="cl-port"><div class="cl-port__name">ch-12</div><div class="cl-port__card"><span class="cl-port__glyph"></span><div class="cl-port__state">离线</div><div class="cl-port__bar"></div><div class="cl-port__flow">▲ —<br>▼ —</div></div></div>
+				<div class="cl-port"><div class="cl-port__name">ch-13</div><div class="cl-port__card"><span class="cl-port__glyph"></span><div class="cl-port__state">离线</div><div class="cl-port__bar"></div><div class="cl-port__flow">▲ —<br>▼ —</div></div></div>
+				<div class="cl-port"><div class="cl-port__name">ch-14</div><div class="cl-port__card"><span class="cl-port__glyph"></span><div class="cl-port__state">离线</div><div class="cl-port__bar"></div><div class="cl-port__flow">▲ —<br>▼ —</div></div></div>
+				<div class="cl-port"><div class="cl-port__name">ch-15</div><div class="cl-port__card"><span class="cl-port__glyph"></span><div class="cl-port__state">离线</div><div class="cl-port__bar"></div><div class="cl-port__flow">▲ —<br>▼ —</div></div></div>
+				<div class="cl-port"><div class="cl-port__name">ch-16</div><div class="cl-port__card"><span class="cl-port__glyph"></span><div class="cl-port__state">离线</div><div class="cl-port__bar"></div><div class="cl-port__flow">▲ —<br>▼ —</div></div></div>
+			</div>
+		</div>
+	</main>
+</div>
+</body>
+</html>
